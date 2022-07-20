@@ -1104,8 +1104,7 @@ class spell_gift_of_the_harvester : public SpellScript
 
 enum Runeforging
 {
-    SPELL_RUNEFORGING_CREDIT     = 54586,
-    QUEST_RUNEFORGING            = 12842
+    SPELL_RUNEFORGING_CREDIT     = 54586
 };
 
 /* 53323 - Rune of Swordshattering
@@ -1124,15 +1123,12 @@ class spell_chapter1_runeforging_credit : public SpellScript
 
     bool Validate(SpellInfo const* /*spellInfo*/) override
     {
-        return ValidateSpellInfo({ SPELL_RUNEFORGING_CREDIT }) &&
-            sObjectMgr->GetQuestTemplate(QUEST_RUNEFORGING);
+        return ValidateSpellInfo({ SPELL_RUNEFORGING_CREDIT });
     }
 
     void HandleDummy(SpellEffIndex /*effIndex*/)
     {
-        if (Player* caster = GetCaster()->ToPlayer())
-            if (caster->GetQuestStatus(QUEST_RUNEFORGING) == QUEST_STATUS_INCOMPLETE)
-                caster->CastSpell(caster, SPELL_RUNEFORGING_CREDIT);
+        GetCaster()->CastSpell(GetCaster(), SPELL_RUNEFORGING_CREDIT);
     }
 
     void Register() override

@@ -38,6 +38,7 @@
 #    PACKET SPOOF PROTECTION SETTINGS
 #    MISC ANTI-CHEAT SETTINGS
 #    METRIC SETTINGS
+#	 TemplateNPC
 #
 ###################################################################################################
 
@@ -4452,4 +4453,7 @@ NpcBot.InfoPacketsLimit = -1
 NpcBot.OwnershipExpireTime = 0
 
 #
+###################################################################################################
+#After changing use .templatenpc reload
+TemplateNPC.BoostCost = 250
 ###################################################################################################

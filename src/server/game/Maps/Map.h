@@ -18,6 +18,8 @@
 #ifndef TRINITY_MAP_H
 #define TRINITY_MAP_H
 
+#include "CustomData.h"
+
 #include "Define.h"
 
 #include "Cell.h"
@@ -479,6 +481,8 @@ class TC_GAME_API Map : public GridRefManager<NGridType>
 
         void SendToPlayers(WorldPacket const* data) const;
 
+		MapCustomData CustomData;
+		
         typedef MapRefManager PlayerList;
         PlayerList const& GetPlayers() const { return m_mapRefManager; }
 

@@ -396,6 +396,12 @@ inline void GetCreatureListWithEntryInGrid(Container& container, WorldObject* so
     source->GetCreatureListWithEntryInGrid(container, entry, maxSearchRange);
 }
 
+ template <typename Container>
+ inline void GetDeadCreatureListInGrid(Container& container, WorldObject* source, float maxSearchRange, bool alive = false)
+ {
+     source->GetDeadCreatureListInGrid(container, maxSearchRange, alive);
+ }
+
 template <typename Container>
 inline void GetGameObjectListWithEntryInGrid(Container& container, WorldObject* source, uint32 entry, float maxSearchRange)
 {

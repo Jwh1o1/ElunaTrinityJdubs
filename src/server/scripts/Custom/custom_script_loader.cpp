@@ -16,13 +16,14 @@
  */
 
 // This is where scripts' loading functions should be declared:
-void AddSC_TemplateNPC();
-void AddSC_NPC_Profession();
-
 // The name of this function should match:
 // void Add${NameOfDirectory}Scripts()
+void AddSC_TemplateNPC();
+void AddSC_NPC_Profession();
+void AddSC_REFORGER_NPC();
 void AddCustomScripts()
 {
     AddSC_TemplateNPC();
 	AddSC_NPC_Profession();
+	AddSC_REFORGER_NPC();
 }
